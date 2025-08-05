@@ -4,7 +4,7 @@ import Timer from "./components/timer";
 import Digitalclock from "./components/digitalclock";
 
 function App() {
-  const [choice, setChoice] = useState("digitalclock");
+  const [choice, setChoice] = useState(null);
 
   const renderComponent = () => {
     switch (choice) {
@@ -20,10 +20,10 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gray-900">
       {!choice ? (
         <>
-          <h1 className="text-3xl font-bold mb-6 text-gray-800">
+          <h1 className="text-3xl font-bold mb-6 text-gray-200">
             Choose Your Option
           </h1>
           <div className="flex gap-4 flex-wrap justify-center">

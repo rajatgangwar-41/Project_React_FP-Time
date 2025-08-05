@@ -64,7 +64,9 @@ const Stopwatch = () => {
 
   return (
     <div className="bg-gray-900 h-screen w-full flex flex-col items-center gap-10">
-      <h1 className="mt-30 text-red-700 font-normal text-5xl">Stopwatch</h1>
+      <h1 className="mt-30 text-3xl bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition">
+        Stopwatch
+      </h1>
       <div className="mt-40 ml-15 inline-block w-auto text-white text-7xl min-w-110">
         {formatTime()}
       </div>

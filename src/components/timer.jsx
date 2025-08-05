@@ -128,7 +128,9 @@ const Stopwatch = () => {
 
   return (
     <div className="bg-gray-900 h-screen w-full flex flex-col items-center gap-10">
-      <h1 className="mt-30 text-red-700 font-normal text-5xl">Timer</h1>
+      <h1 className="mt-30 text-3xl bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">
+        Timer
+      </h1>
       <div className="my-10 bg-transparent justify-center text-xl flex gap-3">
         {timerOrder.map((orderKey) => {
           const data = config[orderKey];

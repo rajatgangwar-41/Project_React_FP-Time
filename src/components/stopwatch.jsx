@@ -2,10 +2,12 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
+  // const [count, setCount] = useState(0);
 
   const stopwatchRef = useRef(null);
   const intervalRef = useRef(null);
   const needToResumeRef = useRef(true);
+  // const timeRef = useRef(4000);
 
   const handleStart = useCallback(() => {
     clearInterval(intervalRef.current);
@@ -62,6 +64,18 @@ const Stopwatch = () => {
     return `${hr}:${min}:${sec}:${ms}`;
   };
 
+  // useEffect(() => {
+  //   const tick = () => {
+  //     setCount((p) => p + 1);
+  //     timeRef.current = timeRef.current / 2;
+  //     setTimeout(tick, timeRef.current);
+  //   };
+
+  //   const timeOutId = setTimeout(tick, timeRef.current);
+
+  //   return () => clearTimeout(timeOutId);
+  // }, []);
+
   return (
     <div className="bg-gray-900 h-screen w-full flex flex-col items-center gap-10">
       <h1 className="mt-30 text-3xl bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition">
@@ -87,6 +101,9 @@ const Stopwatch = () => {
           </button>
         </li>
       </ul>
+      {/* <div className="mt-10 ml-60 inline-block w-auto text-white text-7xl min-w-110">
+        {count}
+      </div> */}
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Config = {
     factor: 60 * 1000,
   },
   [timer.sec]: {
-    value: "10",
+    value: "",
     placeholder: "SS",
     factor: 1000,
   },
@@ -133,7 +133,7 @@ const Stopwatch = () => {
         {timerOrder.map((orderKey) => {
           const data = config[orderKey];
           return (
-            <div key={crypto.randomUUID()}>
+            <div key={orderKey}>
               <input
                 name={orderKey}
                 type="text"
@@ -160,7 +160,7 @@ const Stopwatch = () => {
           );
         })}
       </div>
-      <div className="ml-15 inline-block w-auto text-white text-7xl min-w-110">
+      <div className="pl-20 text-white text-7xl min-w-150">
         {formatTime(time)}
       </div>
       <ul className="flex gap-5">

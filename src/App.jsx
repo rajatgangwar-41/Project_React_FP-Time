@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Stopwatch from "./components/stopwatch";
 import Timer from "./components/timer";
+import Digitalclock from "./components/digitalclock";
 
 function App() {
-  const [choice, setChoice] = useState("timer");
+  const [choice, setChoice] = useState("digitalclock");
 
   const renderComponent = () => {
     switch (choice) {
@@ -12,7 +13,7 @@ function App() {
       case "timer":
         return <Timer />;
       case "digitalclock":
-        return <Stopwatch />;
+        return <Digitalclock />;
       default:
         return null;
     }
